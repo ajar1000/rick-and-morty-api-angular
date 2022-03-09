@@ -7,7 +7,12 @@ import { Apollo, gql } from 'apollo-angular';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  results: {name: string, status: string}[] = [];
+  results: {
+    name: string,
+    status: string,
+    id: string,
+    image: string,
+  }[] = [];
 
   constructor(private apollo: Apollo) {}
 
@@ -18,8 +23,13 @@ export class AppComponent implements OnInit {
           {
             characters {
               results {
+                id
                 name
-                status
+                image
+                location {
+                  type
+                  dimension
+                }
               }
             }
           }
@@ -30,8 +40,10 @@ export class AppComponent implements OnInit {
         this.results = [];
         result.data.characters.results.forEach( (charResult: any) => {
           this.results.push({
+            id: charResult.id,
             name: charResult.name,
-            status: charResult.status,
+            image: charResult.image,
+            status: `${charResult.location.type} (${charResult.location.dimension})`,
           });
         })
       });

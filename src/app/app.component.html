@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <table>
-      <th>Name</th>
-      <th>Status</th>
-      <tr
-        *ngFor="let result of results"
-      >
-        <td>{{ result.name }}</td>
-        <td>{{ result.status }}</td>
-      </tr>
-    </table>
+    <div class="container">
+      <div class="title">All workers</div>
+      
+      <div class="cards">
+        <div class="search-bar">
+          <input placeholder="Search....">
+        </div>
+        <app-character-card
+          *ngFor="let result of results"
+          [id]="result.id"
+          [imageUrl]="result.image"
+          [name]="result.name"
+          [description]="result.status"
+        ></app-character-card>
+      </div>
+
+      <app-character-details></app-character-details>
+    </div>
   </body>
 </html>

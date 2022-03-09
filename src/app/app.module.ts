@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { CharacterCardComponent } from './character-card/character-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CharacterDetailsComponent } from './character-details/character-details
     BrowserModule,
     ApolloModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [
     {

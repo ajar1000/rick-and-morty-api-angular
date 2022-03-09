@@ -1,0 +1,17 @@
+:host
+{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.left-side,
+.right-side
+{
+  display: flex;
+}
+
+img
+{
+  height: 80px;
+}
