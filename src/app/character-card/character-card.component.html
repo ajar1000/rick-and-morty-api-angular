@@ -10,5 +10,5 @@
 </div>
 <div class="right-side">
   <div class="id">{{ id }}</div>
-  <div class="right-chevron">></div>
+  <a [routerLink]="['details', id]" routerLinkActive="active" class="right-chevron">></a>
 </div>

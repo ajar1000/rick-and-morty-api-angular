@@ -9,12 +9,14 @@ import { CharacterCardComponent } from './character-card/character-card.componen
 import { HttpClientModule } from '@angular/common/http';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EmptyComponent } from './empty/empty.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharacterCardComponent,
-    CharacterDetailsComponent
+    CharacterDetailsComponent,
+    EmptyComponent
   ],
   imports: [
     BrowserModule,
