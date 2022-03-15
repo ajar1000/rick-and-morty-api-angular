@@ -1,2 +1,18 @@
-<p>character-details works!</p>
-<p>Character id: {{ id }}</p>
+<div *ngIf="loading" class="spinner-border" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="details" *ngIf="!loading">
+  <img [src]="character?.image">
+  <div class="title">Name</div>
+  <div>{{ character?.name }}</div>
+  <div class="title">Status</div>
+  <div>{{ character?.status }}</div>
+  <div class="title">Species</div>
+  <div>{{ character?.species }}</div>
+  <div class="title">Type</div>
+  <div>{{ character?.type }}</div>
+  <div class="title">Gender</div>
+  <div>{{ character?.gender }}</div>
+  <div class="title">Created</div>
+  <div>{{ character?.created }}</div>
+</div>
